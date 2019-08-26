@@ -17,7 +17,7 @@ namespace Onion.Core.ApplicationService
         /// 
         /// </summary>
         /// <returns></returns>
-        Movie FindSingle();
+        Movie FindSingle(int id);
 
         /// <summary>
         /// 
