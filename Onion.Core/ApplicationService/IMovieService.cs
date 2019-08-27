@@ -26,5 +26,11 @@ namespace Onion.Core.ApplicationService
         /// <returns></returns>
         Movie Add(Movie movie);
 
+        /// <summary>   
+        /// 
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
+        Movie Delete(Movie movie);
     }
 }

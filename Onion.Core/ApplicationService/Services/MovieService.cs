@@ -1,8 +1,8 @@
 ﻿using Onion.Core.DomainService;
 using Onion.Core.Entity;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.IO;
+using System.Linq;
 
 namespace Onion.Core.ApplicationService.Services
 {
@@ -21,6 +21,11 @@ namespace Onion.Core.ApplicationService.Services
             return movie;
         }
 
+        public Movie Delete(Movie movie)
+        {
+            return this._MovieRepo.Delete()
+        }
+
         public List<Movie> FindAllMovies()
         {
             return this._MovieRepo.ReadAll();
@@ -28,8 +33,9 @@ namespace Onion.Core.ApplicationService.Services
 
         public Movie FindSingle(int id)
         {
-            return this._MovieRepo.Create
-             
+            return this._MovieRepo.ReadAll().FirstOrDefault(movie => movie.id == id);
+
         }
+
     }
 }
